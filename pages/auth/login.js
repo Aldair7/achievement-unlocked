@@ -11,7 +11,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email,, password);
+      await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
       console.error("Error Logging in:", error);
     }
