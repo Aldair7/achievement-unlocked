@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../lib/firebase";
+import { useRouter } from "next/router";
 
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+  const router = userRouter();
 
   const handleRegister = async (e) => {
     e.preventDefault();
