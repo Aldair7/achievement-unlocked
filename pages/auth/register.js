@@ -7,7 +7,8 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const router = userRouter();
+  const router = useRouter();
+
 
   const handleRegister = async (e) => {
     e.preventDefault();
